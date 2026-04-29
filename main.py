@@ -121,7 +121,7 @@ def delete_book():
 
 def save_data():
     try:
-        filename = f"books_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
+        filename = f"books.json"
         with open(filename, "w", encoding="utf-8") as f:
             json.dump(books, f, ensure_ascii=False, indent=4)
         messagebox.showinfo("Успех", f"Данные сохранены в файл {filename}")
